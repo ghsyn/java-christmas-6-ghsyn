@@ -28,6 +28,6 @@ public enum Appetizer {
     }
 
     public void setCount(int count) {
-        this.count = count;
+        this.count += count;
     }
 }

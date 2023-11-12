@@ -29,6 +29,6 @@ public enum Main {
     }
 
     public void setCount(int count) {
-        this.count = count;
+        this.count += count;
     }
 }

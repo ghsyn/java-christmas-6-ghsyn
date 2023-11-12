@@ -26,6 +26,6 @@ public enum Dessert {
     }
 
     public void setCount(int count) {
-        this.count = count;
+        this.count += count;
     }
 }
