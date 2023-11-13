@@ -1,8 +1,12 @@
 package christmas.discount;
 
-abstract class WeekendEvent implements Discount {
+public class WeekendEvent implements Discount {
     private int salePrice;
     private static final int MAIN_SALE_AMOUNT = 2023;
+
+    @Override
+    public void doSale(int visitDate) {
+    }
 
     @Override
     public void doSale(String[][] mainMenuArray) {
