@@ -13,21 +13,20 @@ public class DecemberEvent implements BadgeGrant {
     private static String badge = "";
 
     @Override
-    public boolean doGrant(int benefitPrice) {
+    public boolean doGrant(int totalSalePrice, int totalGiftPrice) {
+        int benefitPrice = totalSalePrice + totalGiftPrice;
+
         for (Map.Entry<Integer, String> pair : BADGES.entrySet()) {
             if (benefitPrice >= pair.getKey()) {
                 badge = pair.getValue();
             }
         }
 
-        if (badge == "") {
-            return false;
-        }
-        return true;
+        return !badge.isEmpty();
     }
 
     @Override
-    public String getBedge() {
+    public String getBadge() {
         return badge;
     }
 }

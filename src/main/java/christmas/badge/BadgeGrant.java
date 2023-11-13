@@ -1,6 +1,6 @@
 package christmas.badge;
 
 public interface BadgeGrant {
-    boolean doGrant(int benefitPrice);
-    String getBedge();
+    boolean doGrant(int totalSalePrice, int totalGiftPrice);
+    String getBadge();
 }
