@@ -4,6 +4,7 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class DecemberEvent implements BadgeGrant {
+    private final String EVENT_NAME = "12월 이벤트 배지";
     private static final Map<Integer, String> BADGES = new TreeMap<>();
     static {
         BADGES.put(5000, "별");
@@ -23,6 +24,11 @@ public class DecemberEvent implements BadgeGrant {
         }
 
         return !badge.isEmpty();
+    }
+
+    @Override
+    public String getEventName() {
+        return EVENT_NAME;
     }
 
     @Override
