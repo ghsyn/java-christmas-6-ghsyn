@@ -2,5 +2,7 @@ package christmas.discount;
 
 public interface Discount {
 
-    int doSale(int originalPrice);
+    void doSale(int visitDate);
+    void doSale(String[][] eventMenuArray);
+    int getSalePrice();
 }

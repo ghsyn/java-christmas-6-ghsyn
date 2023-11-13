@@ -1,10 +1,11 @@
 package christmas.discount;
 
-public class WeekdayEvent implements Discount {
+abstract class WeekdayEvent implements Discount {
     private int salePrice;
     private static final int DESSERT_SALE_AMOUNT = 2023;
 
-    public void setSalePrice(String[][] dessertMenuArray) {
+    @Override
+    public void doSale(String[][] dessertMenuArray) {
         int numberOfDessert = 0;
         try {
             for (String count : dessertMenuArray[0]) {
@@ -19,7 +20,7 @@ public class WeekdayEvent implements Discount {
     }
 
     @Override
-    public int doSale(int originalPrice) {
-        return originalPrice - salePrice;
+    public int getSalePrice() {
+        return salePrice;
     }
 }
