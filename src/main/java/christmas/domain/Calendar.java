@@ -1,4 +1,4 @@
-package christmas;
+package christmas.domain;
 
 public class Calendar {
     private static final String[] DAYS_OF_THE_WEEK = {"월", "화", "수", "목", "금", "토", "일"};

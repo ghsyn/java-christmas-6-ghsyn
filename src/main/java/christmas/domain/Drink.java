@@ -1,15 +1,16 @@
-package christmas.menu;
+package christmas.domain;
 
-public enum Appetizer {
-    BUTTON_MUSHROOM_SOUP("양송이수프", 6000 ,0),
-    TAPAS("타파스", 5500, 0),
-    CAESAR_SALAD("시저샐러드", 8000, 0);
+public enum Drink {
+
+    ZERO_COKE("제로콜라", 3000, 0),
+    RED_WINE("레드와인", 60000, 0),
+    CHAMPAGNE("샴페인", 25000, 0);
 
     private String korName;
     private int price;
     private int count;
 
-    Appetizer(String korName, int price, int count) {
+    Drink(String korName, int price, int count) {
         this.korName = korName;
         this.price = price;
         this.count = count;
@@ -22,7 +23,6 @@ public enum Appetizer {
     public int getPrice() {
         return price;
     }
-
     public int getCount() {
         return count;
     }
