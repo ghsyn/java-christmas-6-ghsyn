@@ -1,7 +1,6 @@
 package christmas.giveaway;
 
-import christmas.OutputView;
-import christmas.menu.Drink;
+import christmas.domain.Drink;
 
 public class ChampagneEvent implements Giveaway {
     private static final String EVENT_NAME = "";
@@ -11,9 +10,8 @@ public class ChampagneEvent implements Giveaway {
     private static final int GIFT_NUM = 1;
 
     @Override
-    public boolean doGiveaway(int originalPrice) {
+    public boolean isGiveaway(int originalPrice) {
         if (originalPrice > MINIMUM_ORIGINAL_PRICE) {
-            OutputView.giveawayMessage(getMenuKorName(), getNumberOfMenu());
             return true;
         }
         return false;
