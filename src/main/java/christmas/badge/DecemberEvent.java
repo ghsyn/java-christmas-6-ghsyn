@@ -14,9 +14,7 @@ public class DecemberEvent implements BadgeGrant {
     private static String badge = "";
 
     @Override
-    public void doGrant(int totalSalePrice, int totalGiftPrice) {
-        int benefitPrice = totalSalePrice + totalGiftPrice;
-
+    public void doGrant(int benefitPrice) {
         for (Map.Entry<Integer, String> pair : BADGES.entrySet()) {
             if (benefitPrice >= pair.getKey()) {
                 badge = pair.getValue();
