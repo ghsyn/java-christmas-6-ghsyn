@@ -1,33 +1,26 @@
 package christmas.domain.menu;
 
-public enum Drink {
+public enum Drink implements Menu {
 
-    ZERO_COKE("제로콜라", 3000, 0),
-    RED_WINE("레드와인", 60000, 0),
-    CHAMPAGNE("샴페인", 25000, 0);
+    ZERO_COKE("제로콜라", 3000),
+    RED_WINE("레드와인", 60000),
+    CHAMPAGNE("샴페인", 25000);
 
     private String korName;
     private int price;
-    private int count;
 
-    Drink(String korName, int price, int count) {
+    Drink(String korName, int price) {
         this.korName = korName;
         this.price = price;
-        this.count = count;
     }
 
+    @Override
     public String getKorName() {
         return korName;
     }
 
+    @Override
     public int getPrice() {
         return price;
-    }
-    public int getCount() {
-        return count;
-    }
-
-    public void setCount(int count) {
-        this.count += count;
     }
 }

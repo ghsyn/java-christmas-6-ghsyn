@@ -1,31 +1,23 @@
 package christmas.domain.menu;
 
-public enum Dessert {
-    CHOCOLATE_CAKE("초코케이크", 15000, 0),
-    ICE_CREAM("아이스크림", 5000, 0);
+public enum Dessert implements Menu {
+    CHOCOLATE_CAKE("초코케이크", 15000),
+    ICE_CREAM("아이스크림", 5000);
     private String korName;
     private int price;
-    private int count;
 
-    Dessert(String korName, int price, int count) {
+    Dessert(String korName, int price) {
         this.korName = korName;
         this.price = price;
-        this.count = count;
     }
 
+    @Override
     public String getKorName() {
         return korName;
     }
 
+    @Override
     public int getPrice() {
         return price;
-    }
-
-    public int getCount() {
-        return count;
-    }
-
-    public void setCount(int count) {
-        this.count += count;
     }
 }
