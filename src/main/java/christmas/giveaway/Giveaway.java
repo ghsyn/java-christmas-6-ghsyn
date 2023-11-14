@@ -2,7 +2,8 @@ package christmas.giveaway;
 
 public interface Giveaway {
 
-    boolean isGiveaway(int originalPrice);
+    void doGiveaway(int originalPrice);
+    boolean getIsApplied();
     String getEventName();
     String getMenuKorName();
     int getMenuPrice();

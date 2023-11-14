@@ -1,20 +1,22 @@
 package christmas.giveaway;
 
-import christmas.domain.Drink;
+import christmas.domain.menu.Drink;
 
 public class ChampagneEvent implements Giveaway {
     private static final String EVENT_NAME = "";
-    private static final int MINIMUM_ORIGINAL_PRICE = 120000;
+    private static boolean isApplied = false;
     private static final String GIFT_KOR_NAME = Drink.CHAMPAGNE.getKorName();
     private static final int GIFT_PRICE = Drink.CHAMPAGNE.getPrice();
     private static final int GIFT_NUM = 1;
 
     @Override
-    public boolean isGiveaway(int originalPrice) {
-        if (originalPrice > MINIMUM_ORIGINAL_PRICE) {
-            return true;
-        }
-        return false;
+    public void doGiveaway(int originalPrice) {
+        isApplied = true;
+    }
+
+    @Override
+    public boolean getIsApplied() {
+        return isApplied;
     }
 
     @Override
