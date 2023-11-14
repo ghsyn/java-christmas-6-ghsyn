@@ -1,4 +1,4 @@
-package christmas;
+package christmas.view;
 
 import christmas.badge.BadgeGrant;
 import christmas.discount.Discount;
