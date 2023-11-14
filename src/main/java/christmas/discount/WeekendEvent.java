@@ -6,6 +6,10 @@ public class WeekendEvent implements Discount {
     private static final int MAIN_SALE_AMOUNT = 2023;
 
     @Override
+    public void doSale() {
+    }
+
+    @Override
     public void doSale(int visitDate) {
     }
 
