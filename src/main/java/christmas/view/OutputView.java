@@ -58,8 +58,9 @@ public class OutputView {
 
     public static void printBadge(BadgeGrant badgeEvent) {
         System.out.println("<" + badgeEvent.getEventName() + ">");
-        System.out.println(badgeEvent.getBadge());
-        if (badgeEvent.getBadge().isEmpty()) {
+        if (!badgeEvent.getBadge().isEmpty()) {
+            System.out.println(badgeEvent.getBadge());
+        } else if (badgeEvent.getBadge().isEmpty()) {
             nothingMessage();
         }
     }
