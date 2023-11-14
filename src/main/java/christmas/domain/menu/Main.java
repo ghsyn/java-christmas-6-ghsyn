@@ -1,4 +1,4 @@
-package christmas.domain;
+package christmas.domain.menu;
 
 public enum Main {
     T_BONE_STEAK("티본스테이크", 55000, 0),

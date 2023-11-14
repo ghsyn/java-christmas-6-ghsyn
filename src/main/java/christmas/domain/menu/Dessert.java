@@ -1,15 +1,13 @@
-package christmas.domain;
+package christmas.domain.menu;
 
-public enum Appetizer {
-    BUTTON_MUSHROOM_SOUP("양송이수프", 6000 ,0),
-    TAPAS("타파스", 5500, 0),
-    CAESAR_SALAD("시저샐러드", 8000, 0);
-
+public enum Dessert {
+    CHOCOLATE_CAKE("초코케이크", 15000, 0),
+    ICE_CREAM("아이스크림", 5000, 0);
     private String korName;
     private int price;
     private int count;
 
-    Appetizer(String korName, int price, int count) {
+    Dessert(String korName, int price, int count) {
         this.korName = korName;
         this.price = price;
         this.count = count;
