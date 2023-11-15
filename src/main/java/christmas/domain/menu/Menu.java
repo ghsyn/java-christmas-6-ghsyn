@@ -5,6 +5,7 @@ import java.util.stream.Stream;
 
 public interface Menu {
     String getKorName();
+
     int getPrice();
 
     static Menu[] getAllItems() {

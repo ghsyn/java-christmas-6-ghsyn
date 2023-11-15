@@ -4,8 +4,6 @@ import christmas.domain.menu.Dessert;
 import christmas.domain.menu.Menu;
 import christmas.exception.IllegalArgumentExceptionHandler;
 
-import java.lang.reflect.Member;
-
 public class WeekdayEvent implements Discount {
     private final String EVENT_NAME = "평일 할인";
     private int salePrice;

@@ -5,9 +5,8 @@ import christmas.controller.*;
 import christmas.discount.*;
 import christmas.domain.*;
 import christmas.domain.menu.*;
-import christmas.exception.IllegalArgumentExceptionHandler;
 import christmas.giveaway.*;
-import christmas.view.*;
+import christmas.view.OutputView;
 
 import java.util.List;
 

@@ -11,7 +11,6 @@ public class DiscountValidator {
     private static final List<String> WEEKEND = List.of("금", "토");
     private static final List<String> SPECIAL_DAY = List.of("일");
 
-    // order를 어떻게 줘야하나
     public static void doDiscount(Discount discountEvent, String visitDay, String[][] order) {
         if (discountEvent instanceof ChristmasEvent) {
             if (1 <= VISIT_DATE && VISIT_DATE <= 25) {

@@ -30,9 +30,6 @@ public class InputView {
         }
     }
 
-    // 형식에 맞는지
-    // 정수인지
-    // 음료만 주문하는지
     public static String[][] readOrder() {
         String[][] order = null;
 
@@ -84,8 +81,7 @@ public class InputView {
             if (menuInfo.length == 2) {
                 order[i][0] = menuInfo[0].trim();
                 order[i][1] = menuInfo[1].trim();
-            }
-            else {
+            } else {
                 return null;
             }
         }
