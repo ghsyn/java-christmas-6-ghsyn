@@ -6,7 +6,7 @@ public class ChampagneEvent implements Giveaway {
     private static final String EVENT_NAME = "";
     private static boolean isApplied = false;
     private static final String GIFT_KOR_NAME = Drink.CHAMPAGNE.getKorName();
-    private static final int GIFT_PRICE = Drink.CHAMPAGNE.getPrice();
+    private static final int GIFT_PRICE = -(Drink.CHAMPAGNE.getPrice());
     private static final int GIFT_NUM = 1;
 
     @Override

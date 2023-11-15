@@ -12,7 +12,7 @@ public class ChristmasEvent implements Discount {
 
     @Override
     public void doSale(int visitDate) {
-        salePrice = START_SALE_AMOUNT - (visitDate - 1) * INCREASE_SALE_AMOUNT;
+        salePrice = -(START_SALE_AMOUNT + (visitDate - 1) * INCREASE_SALE_AMOUNT);
     }
 
     @Override

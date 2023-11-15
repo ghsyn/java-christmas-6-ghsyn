@@ -7,7 +7,7 @@ public class SpecialEvent implements Discount {
 
     @Override
     public void doSale() {
-        salePrice = SPECIAL_SALE_AMOUNT;
+        salePrice = -(SPECIAL_SALE_AMOUNT);
     }
 
     @Override
