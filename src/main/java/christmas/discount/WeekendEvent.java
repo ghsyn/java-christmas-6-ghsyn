@@ -1,6 +1,5 @@
 package christmas.discount;
 
-import christmas.domain.menu.Dessert;
 import christmas.domain.menu.Main;
 import christmas.domain.menu.Menu;
 import christmas.exception.IllegalArgumentExceptionHandler;
@@ -36,7 +35,7 @@ public class WeekendEvent implements Discount {
     private int countMain(String korName, String quantity, Menu menu) {
         try {
             if (menu.getKorName().equals(korName)) {
-                if (menu instanceof Dessert) {
+                if (menu instanceof Main) {
                     return Integer.parseInt(quantity);
                 }
             }
