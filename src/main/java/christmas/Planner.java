@@ -38,17 +38,10 @@ public class Planner {
     }
 
     private int getItemPrice(String korName, String quantity) {
-        try {
-            for (Menu menu : Menu.getAllItems()) {
-                if (menu.getKorName().equals(korName)) {
-                    return menu.getPrice() * Integer.parseInt(quantity);
-                }
+        for (Menu menu : Menu.getAllItems()) {
+            if (menu.getKorName().equals(korName)) {
+                return menu.getPrice() * Integer.parseInt(quantity);
             }
-            throw new IllegalArgumentException(korName + "은(는) 없는 메뉴입니다.");
-        } catch (NumberFormatException e) {
-            new IllegalArgumentExceptionHandler("유효하지 않은 주문입니다. 다시 입력해 주세요.");
-        } catch (IllegalArgumentException e) {
-            new IllegalArgumentExceptionHandler(e.getMessage());
         }
         return 0;
     }
