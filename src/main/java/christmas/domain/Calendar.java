@@ -15,7 +15,7 @@ public class Calendar {
 
     public static String findDayOfWeek(int visitDate) {
         setDayIndex();
-        String dayOfVisitDate = DAYS_OF_THE_WEEK[visitDate % 7 + dayIndex - 1];
+        String dayOfVisitDate = DAYS_OF_THE_WEEK[(visitDate + dayIndex - 1) % 7];
 
         return dayOfVisitDate;
     }
